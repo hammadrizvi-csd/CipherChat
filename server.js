@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const http = require("http");
 const { Server } = require("socket.io");
@@ -31,7 +32,7 @@ app.get("/", (req, res) => { res.sendFile(path.join(__dirname, "public", "index.
 socketHandler(io);
 
 // Database Connection
-mongoose.connect("mongodb://username:password@ac-qcxxumt-shard-00-00.ovirt6j.mongodb.net:27017,ac-qcxxumt-shard-00-01.ovirt6j.mongodb.net:27017,ac-qcxxumt-shard-00-02.ovirt6j.mongodb.net:27017/?ssl=true&replicaSet=atlas-4l2eaz-shard-0&authSource=admin&appName=CipherChat")
+mongoose.connect(process.env.MONGO_URI)
 .then(() => console.log("MongoDB connected ✅"))
 .catch(err => console.log("DB error:", err));
 
