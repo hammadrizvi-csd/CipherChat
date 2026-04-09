@@ -7,7 +7,7 @@ const otpStore = {}; // Temporary OTP memory
 
 const transporter = nodemailer.createTransport({
     service: "gmail",
-    auth: { user: "hammadrizvi346@gmail.com", pass: "firskelcvbtotkgw" }
+    auth: { user: "cipherchat.teamx@gmail.com", pass: "qknqelpdwghlqllu" }
 });
 
 exports.sendOtp = async (req, res) => {
@@ -22,7 +22,7 @@ exports.sendOtp = async (req, res) => {
         const otp = Math.floor(100000 + Math.random() * 900000).toString();
         otpStore[email] = otp; 
         await transporter.sendMail({
-            from: "hammadrizvi346@gmail.com", to: email, subject: "CipherChat - Verification OTP",
+            from: "cipherchat.teamx@gmail.com", to: email, subject: "CipherChat - Verification OTP",
             html: `<h3>Welcome to CipherChat!</h3><p>Your OTP is: <b style="font-size:20px; color:#00a884;">${otp}</b></p>`
         });
         res.status(200).json({ message: "OTP sent successfully!" });

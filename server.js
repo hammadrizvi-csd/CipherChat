@@ -31,7 +31,7 @@ app.get("/", (req, res) => { res.sendFile(path.join(__dirname, "public", "index.
 socketHandler(io);
 
 // Database Connection
-mongoose.connect("mongodb://asheerrizvi346_db_user:chatapp123@ac-yigke4u-shard-00-00.mqp9wb9.mongodb.net:27017,ac-yigke4u-shard-00-01.mqp9wb9.mongodb.net:27017,ac-yigke4u-shard-00-02.mqp9wb9.mongodb.net:27017/chatapp?ssl=true&replicaSet=atlas-iktg3j-shard-0&authSource=admin&retryWrites=true&w=majority")
+mongoose.connect("mongodb://cipherchatteamx:cipherchat@ac-qcxxumt-shard-00-00.ovirt6j.mongodb.net:27017,ac-qcxxumt-shard-00-01.ovirt6j.mongodb.net:27017,ac-qcxxumt-shard-00-02.ovirt6j.mongodb.net:27017/?ssl=true&replicaSet=atlas-4l2eaz-shard-0&authSource=admin&appName=CipherChat")
 .then(() => console.log("MongoDB connected ✅"))
 .catch(err => console.log("DB error:", err));
 
