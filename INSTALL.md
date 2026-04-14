@@ -10,8 +10,12 @@ Is project ko local machine par setup karne ke liye neeche diye gaye steps follo
 ### 2. Local Setup
 ```bash
 # Repo clone karein
-git clone [https://github.com/hammadrizvi-csd/CipherChat.git](https://github.com/hammadrizvi-csd/CipherChat.git)
-cd CipherChat
+git clone [https://github.com/hammadrizvi-csd/Chatify.git](https://github.com/hammadrizvi-csd/cipherchat.git)
+cd cipherchat
+
+
+
+
 
 # Dependencies install karein
 npm install
