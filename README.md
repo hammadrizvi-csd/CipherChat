@@ -35,6 +35,7 @@ Add the following inside `.env`:
 
 ```env
 MONGO_URI=your_mongodb_connection_string_here
+PORT=4000
 ```
 
 ### 🔑 Notes:
@@ -45,13 +46,7 @@ MONGO_URI=your_mongodb_connection_string_here
 ### ▶️ Run the Application
 
 ```bash
-npm run dev
-```
-
-or
-
-```bash
-npm start
+npm run start
 ```
 
 ---
